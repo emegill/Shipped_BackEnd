@@ -14,7 +14,7 @@ ActiveRecord::Schema.define(version: 20170607153721) do
 
   create_table "boats", force: :cascade do |t|
     t.string "name"
-    t.integer "containerAmount"
+    t.integer "container_amount"
     t.string "location"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
