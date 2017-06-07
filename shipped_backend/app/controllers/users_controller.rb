@@ -1,8 +1,20 @@
 class UsersController < ApplicationController
 
     def index
+        loggedUser = User.where(name: params[:name]).first
 
-        render json: User.all
+        if loggedUser.password === params[:password]
+
+            session[:user_id] = loggedUser.id
+            loggedInState = false
+
+            render json: loggedInState
+
+        else
+            loggedInState = false
+            render json:  logginedInState
+        end
+
     end
 
     def create
@@ -13,6 +25,6 @@ class UsersController < ApplicationController
     private
 
     def user_params
-        params.require(:).permit(:name, :password)
+        params.require(:data).permit(:name, :password)
     end
 end

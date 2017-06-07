@@ -3,9 +3,9 @@ Rails.application.routes.draw do
 
   root to: 'users#index'
 
-  resources :users;
-  resources :boats;
-  resources :jobs;
+  resources :users
+  resources :boats
+  resources :jobs
 
 
 end
