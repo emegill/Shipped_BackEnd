@@ -6,7 +6,8 @@ class BoatsController < ApplicationController
     end
     def create
 
-
+        boat = Boat.create(boat_params)
+        render json: boat
     end
 
     private
