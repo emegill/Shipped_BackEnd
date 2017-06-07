@@ -17,8 +17,14 @@ class UsersController < ApplicationController
 
     end
 
+    def show
+
+
+    end
+
     def create
 
+        User.create(user_params);
 
     end
 
