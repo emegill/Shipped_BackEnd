@@ -6,6 +6,7 @@ class UsersController < ApplicationController
         if loggedUser.password === params[:password]
 
             user_id = loggedUser.id
+            session[:user_id] = user_id
 
             loggedInState = {views: true, user_id: user_id }
 
