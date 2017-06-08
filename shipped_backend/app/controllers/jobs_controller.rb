@@ -7,10 +7,7 @@ class JobsController < ApplicationController
 
     def create
 
-
-
-
-         newJob = Job.create(job_params)
+         newJob = Job.create!(job_params)
     render json: newJob
     end
 
