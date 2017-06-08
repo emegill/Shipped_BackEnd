@@ -10,9 +10,9 @@ class JobsController < ApplicationController
             p session[:user_id]
                 p session[:user_id]
                     p session[:user_id]
-                    
+
         job = job_params
-        job.user_id = session[:user_id]
+        job.user_id = @newSession
          newJob = Job.create(job)
     render json: newJob
     end

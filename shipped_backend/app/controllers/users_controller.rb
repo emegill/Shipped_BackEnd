@@ -10,7 +10,7 @@ class UsersController < ApplicationController
                 p session[:user_id]
                     p session[:user_id]
                         p session[:user_id]
-
+                        @newSession = session[:user_id]
             loggedInState = true
 
             render json: loggedInState
