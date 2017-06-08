@@ -6,10 +6,11 @@ class JobsController < ApplicationController
 
 
     def create
-        p session[:user_id]
-            p session[:user_id]
-                p session[:user_id]
-                    p session[:user_id]
+        p @newSession
+            p @newSession
+                p @newSession
+                    p @newSession
+
 
         job = job_params
         job.user_id = @newSession
