@@ -1,16 +1,16 @@
 class UsersController < ApplicationController
 
     def index
-        loggedUser = User.where(name: params[:name]).first
+        @loggedUser = User.where(name: params[:name]).first
 
-        if loggedUser.password === params[:password]
+        if @loggedUser.password === params[:password]
 
-            session[:user_id] = loggedUser.id
+            session[:user_id] = @loggedUser.id
             p session[:user_id]
                 p session[:user_id]
                     p session[:user_id]
                         p session[:user_id]
-                        
+
             loggedInState = true
 
             render json: loggedInState
