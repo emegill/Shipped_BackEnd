@@ -5,7 +5,7 @@ class BoatsController < ApplicationController
         render json: boats
     end
     def create
-
+        
         boat = Boat.create(boat_params)
         boats = Boat.all
         render json: boats

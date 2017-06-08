@@ -6,10 +6,15 @@ class JobsController < ApplicationController
 
 
     def create
+        p session[:user_id]
+            p session[:user_id]
+                p session[:user_id]
+                    p session[:user_id]
+                    
         job = job_params
         job.user_id = session[:user_id]
-        Job.create(job)
-
+         newJob = Job.create(job)
+    render json: newJob
     end
 
     private
