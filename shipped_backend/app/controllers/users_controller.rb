@@ -6,6 +6,11 @@ class UsersController < ApplicationController
         if loggedUser.password === params[:password]
 
             session[:user_id] = loggedUser.id
+            p session[:user_id]
+                p session[:user_id]
+                    p session[:user_id]
+                        p session[:user_id]
+                        
             loggedInState = true
 
             render json: loggedInState
