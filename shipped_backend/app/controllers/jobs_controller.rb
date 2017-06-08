@@ -6,21 +6,17 @@ class JobsController < ApplicationController
 
 
     def create
-        p @newSession
-            p @newSession
-                p @newSession
-                    p @newSession
 
 
-        job = job_params
-        job.user_id = @newSession
-         newJob = Job.create(job)
+
+
+         newJob = Job.create(job_params)
     render json: newJob
     end
 
     private
 
     def job_params
-        params.require(:data).permit(:name, :description, :origin, :destination, :cost, :containers_needed, :boat_id)
+        params.require(:data).permit(:name, :description, :origin, :destination, :cost, :containers_needed, :boat_id, :user_id)
     end
 end
